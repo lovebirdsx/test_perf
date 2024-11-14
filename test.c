@@ -87,7 +87,7 @@ double string_test(int count) {
 
 // 打印报告
 void print_report(double cpu, double memory, double io, double string) {
-    printf("%-20s %-10s\n", "C 测试项", "耗时(ms)");
+    printf("%-20s %-10s\n", "Test Type", "Cost(ms)");
     printf("------------------------------\n");
     printf("%-20s %-10.2f\n", "CPU_Test", cpu);
     printf("%-20s %-10.2f\n", "Memory_Test", memory);
@@ -96,7 +96,7 @@ void print_report(double cpu, double memory, double io, double string) {
 }
 
 int main() {
-    double cpu = cpu_test(40); // 40阶斐波那契
+    double cpu = cpu_test(25); // 40阶斐波那契
     double memory = memory_test(1000000); // 100万元素
     double io = io_test("test_io.c", 50); // 50MB
     double string = string_test(100000);

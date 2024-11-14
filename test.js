@@ -73,7 +73,7 @@ function stringTest(count) {
 
 // 打印报告
 function printReport(results) {
-    console.log(`${'JS 测试项'.padEnd(20)} ${'耗时(ms)'.padEnd(10)}`);
+    console.log(`${'Test Type'.padEnd(20)} ${'Cost(ms)'.padEnd(10)}`);
     console.log('-'.repeat(30));
     for (const [test, time] of Object.entries(results)) {
         console.log(`${test.padEnd(20)} ${time}`);
@@ -83,7 +83,7 @@ function printReport(results) {
 // 运行所有测试
 async function runTests() {
     let results = {};
-    results.CPU_Test = cpuTest(40); // 40阶斐波那契
+    results.CPU_Test = cpuTest(25); // 40阶斐波那契
     results.Memory_Test = memoryTest(1000000); // 100万元素
     // I/O 测试需要异步处理
     results.IO_Test = await ioTest('test_io.js', 50);

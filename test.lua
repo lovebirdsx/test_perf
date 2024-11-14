@@ -71,13 +71,13 @@ end
 -- 运行所有测试
 local function run_tests()
     local results = {}
-    results.CPU_Test = cpu_test(40) -- 40阶斐波那契
+    results.CPU_Test = cpu_test(25) -- 40阶斐波那契
     results.Memory_Test = memory_test(1000000) -- 100万元素
     results.IO_Test = io_test("test_io.lua", 50) -- 50MB
     results.String_Test = string_test(100000)
     
     -- 打印报告
-    print(string.format("%-20s %-10s", "Lua 测试项", "耗时(ms)"))
+    print(string.format("%-20s %-10s", "Test Type", "Cost(ms)"))
     print(string.rep("-", 30))
     local keys = {"CPU_Test", "Memory_Test", "IO_Test", "String_Test"}
     for _, test in ipairs(keys) do

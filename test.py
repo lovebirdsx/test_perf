@@ -56,7 +56,7 @@ def string_test(count):
 
 # 打印报告
 def print_report(results):
-    print(f"{'PY 测试项':<20} {'耗时(ms)':<10}")
+    print(f"{'Test Type':<20} {'Cost(ms)':<10}")
     print('-' * 30)
     for test, time_taken in results.items():
         print(f"{test:<20} {time_taken:<10.2f}")
@@ -64,7 +64,7 @@ def print_report(results):
 # 运行所有测试
 def run_tests():
     results = {}
-    results['CPU_Test'] = cpu_test(40)  # 35阶斐波那契
+    results['CPU_Test'] = cpu_test(25)  # 35阶斐波那契
     results['Memory_Test'] = memory_test(1000000)  # 100万元素
     results['IO_Test'] = io_test('test_io.py', 50)  # 50MB
     results['String_Test'] = string_test(100000)
